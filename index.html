@@ -11,12 +11,10 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; line-height: 1.5; overflow-x: hidden; width: 100%; }
 
-        /* HEADER */
         header { background: var(--blanco); padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; }
         .logo-text { font-size: 1.1rem; font-weight: 700; color: var(--purpura); }
         .cart-btn { background: var(--purpura); color: white; border: none; padding: 8px 15px; border-radius: 50px; cursor: pointer; font-weight: 700; font-size: 0.8rem; }
 
-        /* HERO */
         .hero { background: linear-gradient(135deg, var(--purpura), #1a0633); padding: 40px 20px; text-align: center; color: white; width: 100%; }
         .hero h1 { font-size: 1.4rem; margin: 0; }
         .tasa-tag { display: inline-block; background: rgba(0,229,255,0.1); color: var(--cian); padding: 8px 15px; border-radius: 20px; margin-top: 15px; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--cian); }
@@ -25,11 +23,11 @@
         .section-title { color: var(--purpura); text-align: center; margin: 40px 0 25px; font-weight: 700; text-transform: uppercase; font-size: 1.1rem; position: relative; padding-bottom: 10px; width: 100%; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--cian); }
 
-        /* QUIÉNES SOMOS */
-        .about-box { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 30px; width: 100%; }
-        .about-box p { font-size: 0.95rem; color: #555; margin: 0; }
+        /* QUIÉNES SOMOS - VERSIÓN EXPLICATIVA */
+        .about-box { background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; margin-bottom: 35px; width: 100%; border: 1px solid #f0f0f0; }
+        .about-box p { font-size: 1rem; color: #555; margin: 0; line-height: 1.7; }
+        .about-highlight { color: var(--purpura); font-weight: 700; }
 
-        /* PRODUCTOS */
         .grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
         @media (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } }
         
@@ -41,27 +39,22 @@
         .btn-add { background: var(--purpura); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; font-size: 1rem; }
         .btn-consult { background: #555; color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; text-decoration: none; display: block; }
 
-        /* TESTIMONIOS (Los 8 incluidos) */
         .test-grid { display: grid; grid-template-columns: 1fr; gap: 15px; width: 100%; }
         @media (min-width: 768px) { .test-grid { grid-template-columns: repeat(2, 1fr); } }
         .test-card { background: white; padding: 20px; border-radius: 15px; border-left: 4px solid var(--cian); box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
         .test-card p { font-style: italic; font-size: 0.9rem; margin: 0 0 10px 0; color: #444; }
         .test-card b { color: var(--purpura); font-size: 0.8rem; }
 
-        /* FAQ */
         .faq-box { background: white; border-radius: 15px; padding: 15px; margin-bottom: 10px; cursor: pointer; width: 100%; text-align: left; }
         .faq-box h4 { margin: 0; font-size: 0.95rem; color: var(--purpura); display: flex; justify-content: space-between; }
         .faq-answer { display: none; margin-top: 10px; font-size: 0.85rem; color: #666; padding-top: 10px; border-top: 1px solid #eee; }
         .faq-box.active .faq-answer { display: block; }
 
-        /* WHATSAPP */
         .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background: var(--whatsapp); color: white; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
 
-        /* CARRITO */
         #cart-sidebar { position: fixed; right: -100%; top: 0; width: 85%; max-width: 400px; height: 100%; background: white; z-index: 3000; padding: 25px; transition: 0.4s; display: flex; flex-direction: column; box-shadow: -5px 0 20px rgba(0,0,0,0.2); }
         #cart-sidebar.active { right: 0; }
         
-        /* MODAL */
         #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 4000; justify-content: center; align-items: center; padding: 20px; }
         .modal-content { background: white; padding: 25px; border-radius: 20px; width: 100%; max-width: 400px; }
         input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; font-size: 1rem; }
@@ -88,27 +81,27 @@
 <div class="container">
     <h2 class="section-title" id="nosotros">¿Quiénes Somos?</h2>
     <div class="about-box">
-        <p>Especialistas en la distribución de tratamientos <b>GLP-1</b> en Caracas y Anzoátegui. Garantizamos 100% de originalidad y estricta cadena de frío.</p>
+        <p>En <span class="about-highlight">GL PLUS MED</span> somos especialistas en la distribución de tratamientos de última generación para el control metabólico y pérdida de peso en Venezuela. Nos diferenciamos por nuestro <span class="about-highlight">riguroso manejo de la cadena de frío</span> y por ofrecer productos 100% originales con atención personalizada en Caracas y el estado Anzoátegui.</p>
     </div>
 
     <h2 class="section-title">Productos</h2>
     <div class="grid">
         <div class="card">
-            <span class="cold-chain">❄️ CADENA DE FRÍO</span>
+            <span class="cold-chain">❄️ REFRIGERACIÓN GARANTIZADA</span>
             <h3>Ozempic 0.25 / 0.50 MG</h3>
             <p class="price-usd">$200</p>
             <p id="oz1-ves" class="price-ves">Bs. ---</p>
             <button class="btn-add" onclick="addToCart('Ozempic 0.25/0.50 MG', 200)">Añadir al Carrito</button>
         </div>
         <div class="card">
-            <span class="cold-chain">❄️ CADENA DE FRÍO</span>
+            <span class="cold-chain">❄️ REFRIGERACIÓN GARANTIZADA</span>
             <h3>Ozempic 1 MG</h3>
             <p class="price-usd">$300</p>
             <p id="oz2-ves" class="price-ves">Bs. ---</p>
             <button class="btn-add" onclick="addToCart('Ozempic 1 MG', 300)">Añadir al Carrito</button>
         </div>
         <div class="card">
-            <span class="cold-chain">❄️ CADENA DE FRÍO</span>
+            <span class="cold-chain">❄️ REFRIGERACIÓN GARANTIZADA</span>
             <h3>Mounjaro 5 MG</h3>
             <p class="price-usd">$200</p>
             <p id="mj-ves" class="price-ves">Bs. ---</p>
@@ -118,7 +111,7 @@
 
     <h2 class="section-title">Testimonios Reales</h2>
     <div class="test-grid">
-        <div class="test-card"><p>"Llegó perfectamente frío a Caracas."</p><b>María G. (Caracas)</b></div>
+        <div class="test-card"><p>"El envío a Caracas fue perfecto, llegó bien frío."</p><b>María G. (Caracas)</b></div>
         <div class="test-card"><p>"Muy responsables en el envío a Lechería."</p><b>Ricardo M. (Anzoátegui)</b></div>
         <div class="test-card"><p>"Atención rápida y producto original."</p><b>Carlos P. (Barcelona)</b></div>
         <div class="test-card"><p>"La cava térmica mantuvo la temperatura ideal."</p><b>Sofía L. (Caracas)</b></div>
@@ -192,7 +185,7 @@
             const text = await res.text();
             const val = parseFloat(text.replace(/"/g, '').replace(',', '.').trim());
             if (!isNaN(val)) { tasaCambio = val; }
-        } catch (e) { console.log("Error cargando tasa"); }
+        } catch (e) { console.log("Cargando tasa base..."); }
         renderPrecios();
     }
 
@@ -227,7 +220,7 @@
         if(!n) return alert("Escribe tu nombre");
         const num = (u === "caracas") ? "584123300431" : "584123020704";
         const pedidoStr = cart.map(i => `- ${i.name}`).join('%0A');
-        const finalMsg = `*NUEVO PEDIDO - GL PLUS MED*%0A*Nombre:* ${n}%0A*Ciudad:* ${u}%0A*Pago:* ${m}%0A*Productos:*%0A${pedidoStr}%0A*Total:* $${totalUsd}`;
+        const finalMsg = `*NUEVO PEDIDO - GL PLUS MED*%0A*Nombre:* ${n}%0A*Ciudad:* ${u}%0A*Pago:* ${m}%0A*Pedido:*%0A${pedidoStr}%0A*Total:* $${totalUsd}`;
         window.open(`https://wa.me/${num}?text=${finalMsg}`, '_blank');
     }
 
