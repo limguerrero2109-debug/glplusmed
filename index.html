@@ -23,7 +23,6 @@
         .section-title { color: var(--purpura); text-align: center; margin: 40px 0 25px; font-weight: 700; text-transform: uppercase; font-size: 1.1rem; position: relative; padding-bottom: 10px; width: 100%; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--cian); }
 
-        /* QUIÉNES SOMOS - VERSIÓN EXPLICATIVA */
         .about-box { background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; margin-bottom: 35px; width: 100%; border: 1px solid #f0f0f0; }
         .about-box p { font-size: 1rem; color: #555; margin: 0; line-height: 1.7; }
         .about-highlight { color: var(--purpura); font-weight: 700; }
@@ -56,8 +55,9 @@
         #cart-sidebar.active { right: 0; }
         
         #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 4000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: white; padding: 25px; border-radius: 20px; width: 100%; max-width: 400px; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; font-size: 1rem; }
+        .modal-content { background: white; padding: 25px; border-radius: 20px; width: 100%; max-width: 400px; max-height: 90vh; overflow-y: auto; }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; font-size: 1rem; }
+        label { font-size: 0.8rem; color: #666; margin-top: 5px; display: block; }
 
         footer { text-align: center; padding: 30px; color: #999; font-size: 0.8rem; width: 100%; }
     </style>
@@ -128,7 +128,7 @@
     </div>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Cuáles son los métodos de pago? <span>+</span></h4>
-        <p class="faq-answer">Zelle, Efectivo ($), Binance y Pago Móvil (Bs) .</p>
+        <p class="faq-answer">Zelle, Efectivo ($), Binance y Pago Móvil (Bs) a la tasa del día.</p>
     </div>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Son productos originales? <span>+</span></h4>
@@ -151,21 +151,23 @@
 
 <div id="data-modal">
     <div class="modal-content">
-        <h3 style="margin-top:0;">Tus Datos</h3>
-        <input type="text" id="nombre" placeholder="Nombre completo">
-        <select id="ubicacion">
-            <option value="caracas">Caracas</option>
-            <option value="anzoategui">Anzoátegui</option>
-            <option value="otros">Otros Estados</option>
-        </select>
+        <h3 style="margin-top:0;">Requisitos del Pedido</h3>
+        <input type="text" id="nombre" placeholder="Nombre y Apellido">
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nac">
+        <input type="number" id="edad" placeholder="Edad">
+        <input type="text" id="ciudad" placeholder="Ciudad o Estado">
+        
+        <label>Método de Pago:</label>
         <select id="metodo">
             <option value="Zelle">Zelle</option>
             <option value="Efectivo">Efectivo ($)</option>
             <option value="Binance">Binance</option>
             <option value="Pago Movil">Pago Móvil</option>
         </select>
+        
         <button class="btn-add" onclick="enviarPedido()" style="background:var(--whatsapp);">ENVIAR A WHATSAPP</button>
-        <button onclick="closeModal()" style="background:none; border:none; width:100%; color:#999; margin-top:10px; cursor:pointer;">Cancelar</button>
+        <button onclick="closeModal()" style="background:none; border:none; width:100%; color:#999; margin-top:10px; cursor:pointer;">Regresar</button>
     </div>
 </div>
 
@@ -175,7 +177,7 @@
     const SHEET_ID = '1lOAT9C3cWS3UijTn-J8RVagZD6UdlZEQLWHgShE9nBc';
     const URL_SHEET = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&range=Hoja 1!B1`;
 
-    let tasaCambio = 470; 
+    let tasaCambio = 460; 
     let cart = [];
     let totalUsd = 0;
 
@@ -215,12 +217,19 @@
 
     function enviarPedido() {
         const n = document.getElementById('nombre').value;
-        const u = document.getElementById('ubicacion').value;
+        const f = document.getElementById('fecha_nac').value;
+        const e = document.getElementById('edad').value;
+        const c = document.getElementById('ciudad').value;
         const m = document.getElementById('metodo').value;
-        if(!n) return alert("Escribe tu nombre");
-        const num = (u === "caracas") ? "584123300431" : "584123020704";
+
+        if(!n || !f || !e || !c) return alert("Por favor complete todos los requisitos.");
+        
+        // Determinamos el número según la ciudad
+        const num = (c.toLowerCase().includes("caracas")) ? "584123300431" : "584123020704";
         const pedidoStr = cart.map(i => `- ${i.name}`).join('%0A');
-        const finalMsg = `*NUEVO PEDIDO - GL PLUS MED*%0A*Nombre:* ${n}%0A*Ciudad:* ${u}%0A*Pago:* ${m}%0A*Pedido:*%0A${pedidoStr}%0A*Total:* $${totalUsd}`;
+        
+        const finalMsg = `*NUEVO PEDIDO - GL PLUS MED*%0A*Nombre:* ${n}%0A*Fecha Nac:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pago:* ${m}%0A*Pedido:*%0A${pedidoStr}%0A*Total:* $${totalUsd}`;
+        
         window.open(`https://wa.me/${num}?text=${finalMsg}`, '_blank');
     }
 
@@ -228,4 +237,3 @@
 </script>
 </body>
 </html>
-
