@@ -23,11 +23,9 @@
         .container { padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
         .section-title { color: var(--purpura); text-align: center; margin: 60px 0 40px; font-weight: 700; text-transform: uppercase; font-size: 1.3rem; }
         
-        /* QUIÉNES SOMOS */
         .about-box { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; margin-bottom: 50px; }
         .about-box p { font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto; }
 
-        /* PRODUCTOS */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: white; border-radius: 25px; padding: 30px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
         .cold-chain-bar { background: var(--frio); color: var(--azul-frio); font-size: 0.75rem; font-weight: 800; padding: 8px; margin: -30px -30px 25px -30px; border-radius: 25px 25px 0 0; }
@@ -35,13 +33,11 @@
         .btn-add { background: var(--purpura); color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; transition: 0.3s; }
         .btn-consult { background: #666; color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; text-decoration: none; display: block; }
 
-        /* TESTIMONIOS */
         .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .test-card { background: white; padding: 25px; border-radius: 20px; border-left: 5px solid var(--cian); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .test-card p { font-style: italic; font-size: 0.9rem; margin-bottom: 10px; }
         .test-card span { font-weight: 700; color: var(--purpura); font-size: 0.8rem; }
 
-        /* FAQ */
         .faq-box { background: white; border-radius: 15px; padding: 20px; margin-bottom: 15px; cursor: pointer; }
         .faq-answer { display: none; margin-top: 15px; font-size: 0.9rem; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
         .faq-box.active .faq-answer { display: block; }
@@ -82,7 +78,7 @@
 <div class="container">
     <h2 class="section-title" id="nosotros">¿Quiénes Somos?</h2>
     <div class="about-box">
-        <p>En <b>GL PLUS MED</b> somos especialistas en la distribución de tratamientos de última generación para el control metabólico y pérdida de peso en Venezuela. Nos diferenciamos por nuestro <b>riguroso manejo de la cadena de frío</b> y por ofrecer productos 100% originales con atención personalizada en Caracas y el estado Anzoátegui.</p>
+        <p>En <b>GL PLUS MED</b> somos especialistas en la distribución de tratamientos de última generación para el control metabólico en Venezuela. Nos diferenciamos por nuestro <b>riguroso manejo de la cadena de frío</b> y productos 100% originales con atención en Caracas y Anzoátegui.</p>
     </div>
 
     <h2 class="section-title" id="productos">Catálogo de Productos</h2>
@@ -125,15 +121,11 @@
     <h2 class="section-title" id="faq">Preguntas Frecuentes</h2>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Cómo garantizan la cadena de frío? <span>+</span></h4>
-        <p class="faq-answer">Usamos cavas térmicas y geles refrigerantes que mantienen el producto entre 2°C y 8°C hasta su entrega.</p>
+        <p class="faq-answer">Usamos cavas térmicas y geles refrigerantes que mantienen el producto entre 2°C y 8°C.</p>
     </div>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Cuáles son los métodos de pago? <span>+</span></h4>
-        <p class="faq-answer">Zelle, Efectivo ($), Binance y Pago Móvil (Bs) a la tasa del día.</p>
-    </div>
-    <div class="faq-box" onclick="this.classList.toggle('active')">
-        <h4>¿Son productos originales? <span>+</span></h4>
-        <p class="faq-answer">Sí. Todos vienen sellados, con sus agujas y códigos de verificación vigentes.</p>
+        <p class="faq-answer">Zelle, Efectivo ($), Binance y Pago Móvil.</p>
     </div>
 </div>
 
@@ -175,24 +167,31 @@
 </footer>
 
 <script>
-    const SHEET_ID = '1lOAT9C3cWS3UijTn-J8RVagZD6UdlZEQLWHgShE9nBc';
-    const URL_SHEET = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&range=Hoja 1!B1`;
+    const URL_PUB = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR9_1KalokmPChYLHIYRbhxCd0hWidl82uWN3VV9LnZNtN155lL2Kg5-I6zD_4opa9dixEunb7VRZ7W/pub?output=csv';
 
-    let tasaCambio = 470; 
+    let tasaCambio = 460; 
     let cart = [];
     let totalUsd = 0;
 
-    async function actualizarTasa() {
+    async function obtenerTasa() {
         try {
-            const res = await fetch(URL_SHEET);
-            const text = await res.text();
-            const val = parseFloat(text.replace(/"/g, '').replace(',', '.').trim());
-            if (!isNaN(val)) { tasaCambio = val; }
-        } catch (e) { console.error("Error tasa"); }
+            const res = await fetch(URL_PUB);
+            const csv = await res.text();
+            const filas = csv.split('\n');
+            const data = filas[0].split(',');
+            const val = data[1] || data[0]; 
+            const n = parseFloat(val.replace(/"/g, '').replace(',', '.').trim());
+            if (!isNaN(n)) { tasaCambio = n; }
+        } catch (e) { console.error(e); }
+        renderPrecios();
+    }
+
+    function renderPrecios() {
         document.getElementById('tasa-val').innerText = tasaCambio.toFixed(2);
         document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasaCambio).toLocaleString('es-VE')}`;
         document.getElementById('oz2-ves').innerText = `Bs. ${(300 * tasaCambio).toLocaleString('es-VE')}`;
         document.getElementById('mj-ves').innerText = `Bs. ${(200 * tasaCambio).toLocaleString('es-VE')}`;
+        updateUI();
     }
 
     function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
@@ -218,13 +217,11 @@
         const m = document.getElementById('metodo').value;
         if(!n || !u || !m) return alert("Complete los datos.");
         const num = (u === "caracas") ? "584123300431" : "584123020704";
-        const pedidoStr = cart.map(i => `- ${i.name}`).join('%0A');
-        const finalMsg = `*PEDIDO GL PLUS MED*%0A*Cliente:* ${n}%0A*Ciudad:* ${u}%0A*Pago:* ${m}%0A*Pedido:*%0A${pedidoStr}%0A*Total:* $${totalUsd}`;
-        window.open(`https://wa.me/${num}?text=${finalMsg}`, '_blank');
+        const msg = `*PEDIDO GL PLUS MED*%0A*Nombre:* ${n}%0A*Pago:* ${m}%0A*Total:* $${totalUsd}`;
+        window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
     }
 
-    actualizarTasa();
+    obtenerTasa();
 </script>
 </body>
 </html>
-
