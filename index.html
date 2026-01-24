@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GL PLUS MED | Venezuela</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>GL PLUS MED | Tienda Oficial GLP-1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --purpura: #4a148c; --cian: #00e5ff; --blanco: #ffffff; --gris: #f4f4f4; --whatsapp: #25d366; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; }
-        header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky; top: 0; z-index: 1000; }
-        .hero { background: linear-gradient(135deg, var(--purpura), #000); padding: 50px 5%; text-align: center; color: white; }
-        .tasa-tag { display: inline-block; background: rgba(0,229,255,0.2); color: var(--cian); padding: 10px 20px; border-radius: 20px; margin-top: 15px; font-weight: 700; border: 1px solid var(--cian); }
+        :root { --purpura: #4a148c; --cian: #00e5ff; --blanco: #ffffff; --gris: #f4f4f4; --frio: #e1f5fe; --azul-frio: #0288d1; --whatsapp: #25d366; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; line-height: 1.6; }
+        header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo-text { font-size: 1.2rem; font-weight: 700; color: var(--purpura); }
+        .hero { background: linear-gradient(135deg, var(--purpura), #000); padding: 60px 5%; text-align: center; color: white; }
+        .tasa-tag { display: inline-block; background: rgba(0,229,255,0.2); color: var(--cian); padding: 8px 20px; border-radius: 20px; margin-top: 15px; font-size: 0.9rem; font-weight: 700; border: 1px solid var(--cian); }
         .container { padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
-        .about-box { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .about-box { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 25px; padding: 30px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
+        .cold-chain-bar { background: var(--frio); color: var(--azul-frio); font-size: 0.75rem; font-weight: 800; padding: 8px; margin: -30px -30px 25px -30px; border-radius: 25px 25px 0 0; }
         .price-usd { font-size: 2.2rem; color: var(--purpura); font-weight: 700; margin: 10px 0; }
-        .btn-add { background: var(--purpura); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 10px; }
-        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 40px; }
-        .test-card { background: white; padding: 15px; border-radius: 15px; border-left: 5px solid var(--cian); font-size: 0.9rem; }
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; font-size: 30px; }
-        #cart-sidebar { position: fixed; right: -100%; top: 0; width: 100%; max-width: 400px; height: 100%; background: white; z-index: 2000; padding: 30px; transition: 0.5s; box-shadow: -5px 0 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        .btn-add { background: var(--purpura); color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; }
+        .btn-consult { background: #666; color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; text-decoration: none; display: block; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 50px; }
+        .test-card { background: white; padding: 25px; border-radius: 20px; border-left: 5px solid var(--cian); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: white; border-radius: 50px; text-align: center; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 30px; }
+        #cart-sidebar { position: fixed; right: -100%; top: 0; width: 100%; max-width: 450px; height: 100%; background: white; z-index: 10000; padding: 40px; transition: 0.5s; display: flex; flex-direction: column; box-shadow: -10px 0 30px rgba(0,0,0,0.2); }
         #cart-sidebar.active { right: 0; }
-        #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; justify-content: center; align-items: center; }
-        .modal-content { background: white; padding: 30px; border-radius: 20px; width: 90%; max-width: 400px; }
-        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; }
+        #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 11000; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 35px; border-radius: 30px; width: 90%; max-width: 400px; }
+        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 15px; font-family: 'Montserrat'; box-sizing: border-box; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-weight:700; color:var(--purpura); font-size:1.2rem;">GL PLUS MED</div>
+    <div class="logo-text">GL PLUS MED</div>
     <button onclick="toggleCart()" style="background:var(--purpura); color:white; border:none; padding:10px 20px; border-radius:50px; font-weight:700; cursor:pointer;">CARRITO (<span id="cart-count">0</span>)</button>
 </header>
 
@@ -47,26 +50,32 @@
 
     <div class="grid">
         <div class="card">
-            <div style="background:#e1f5fe; color:#0288d1; padding:5px; font-size:0.7rem; font-weight:800; border-radius:10px;">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
             <h3>Ozempic 0.25 / 0.50 MG</h3>
             <p class="price-usd">$200</p>
             <p id="oz1-ves" style="color:#888; font-weight:600;"></p>
             <button class="btn-add" onclick="addToCart('Ozempic 0.25/0.50 MG', 200)">Añadir al Carrito</button>
         </div>
         <div class="card">
-            <div style="background:#e1f5fe; color:#0288d1; padding:5px; font-size:0.7rem; font-weight:800; border-radius:10px;">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
             <h3>Ozempic 1 MG</h3>
             <p class="price-usd">$300</p>
             <p id="oz2-ves" style="color:#888; font-weight:600;"></p>
             <button class="btn-add" onclick="addToCart('Ozempic 1 MG', 300)">Añadir al Carrito</button>
         </div>
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <h3>Mounjaro 5 MG</h3>
+            <p class="price-usd">$200</p>
+            <p id="mj-ves" style="color:#888; font-weight:600;"></p>
+            <button class="btn-consult" onclick="window.open('https://wa.me/584123020704?text=Hola, consulto disponibilidad de Mounjaro 5mg ($200)', '_blank')">CONSULTAR DISPONIBILIDAD</button>
+        </div>
     </div>
 
     <div class="test-grid">
-        <div class="test-card">"Llegó perfecto a Caracas, muy frío."<br><b>- María G.</b></div>
-        <div class="test-card">"Muy responsables en Lechería."<br><b>- Ricardo M.</b></div>
-        <div class="test-card">"Producto 100% original."<br><b>- Carlos P.</b></div>
-        <div class="test-card">"Excelente atención."<br><b>- Sofía L.</b></div>
+        <div class="test-card"><p>"Llegó perfecto a Caracas, bien frío."</p><b>María G.</b></div>
+        <div class="test-card"><p>"Muy responsables en Lechería."</p><b>Ricardo M.</b></div>
+        <div class="test-card"><p>"Atención rápida y producto original."</p><b>Carlos P.</b></div>
     </div>
 </div>
 
@@ -75,7 +84,7 @@
 <div id="cart-sidebar">
     <h2 style="color:var(--purpura)">Tu Pedido</h2>
     <div id="cart-content" style="flex-grow:1; overflow-y:auto;"></div>
-    <div style="border-top:2px solid #eee; padding-top:20px; margin-top:20px;">
+    <div style="border-top:2px solid #eee; padding-top:20px;">
         <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.2rem;"><span>Total USD:</span> <span id="total-usd">$0</span></div>
         <div id="total-ves" style="text-align:right; color:#888;">Bs. 0,00</div>
     </div>
@@ -85,7 +94,7 @@
 
 <div id="data-modal">
     <div class="modal-content">
-        <h3 style="color:var(--purpura); margin-top:0;">Datos del Pedido</h3>
+        <h3 style="color:var(--purpura); margin-top:0;">Requisitos del Pedido</h3>
         <input type="text" id="nombre" placeholder="Nombre y Apellido">
         <label style="font-size:0.7rem; color:#666;">Fecha de Nacimiento:</label>
         <input type="date" id="fecha">
@@ -112,6 +121,7 @@
         document.getElementById('tasa-val').innerText = tasa.toFixed(2);
         document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('oz2-ves').innerText = `Bs. ${(300 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mj-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
     }
 
     function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
@@ -130,10 +140,10 @@
         const f = document.getElementById('fecha').value;
         const e = document.getElementById('edad').value;
         const c = document.getElementById('ciudad').value;
-        if(!n || !f || !e || !c) return alert("Completa los datos");
+        if(!n || !f || !e || !c) return alert("Por favor, complete todos los requisitos.");
         const num = c.toLowerCase().includes("caracas") ? "584123300431" : "584123020704";
         const productos = cart.map(i => `- ${i.n}`).join('%0A');
-        const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${productos}%0A*Total:* $${total}`;
+        const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha Nac:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${productos}%0A*Total:* $${total}`;
         window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
     }
     getTasa();
