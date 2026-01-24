@@ -1,146 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KBGNXVRM');</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GL PLUS MED | Venezuela</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --purpura: #4a148c; --cian: #00e5ff; --blanco: #ffffff; --gris: #f8f9fa; --whatsapp: #25d366; }
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; line-height: 1.5; overflow-x: hidden; width: 100%; }
-
-        header { background: var(--blanco); padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; }
-        .logo-text { font-size: 1.1rem; font-weight: 700; color: var(--purpura); }
-        .cart-btn { background: var(--purpura); color: white; border: none; padding: 8px 15px; border-radius: 50px; cursor: pointer; font-weight: 700; font-size: 0.8rem; }
-
-        .hero { background: linear-gradient(135deg, var(--purpura), #1a0633); padding: 40px 20px; text-align: center; color: white; width: 100%; }
-        .hero h1 { font-size: 1.4rem; margin: 0; }
-        .tasa-tag { display: inline-block; background: rgba(0,229,255,0.1); color: var(--cian); padding: 8px 15px; border-radius: 20px; margin-top: 15px; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--cian); }
-
-        .container { padding: 20px; width: 100%; max-width: 1200px; margin: 0 auto; }
-        .section-title { color: var(--purpura); text-align: center; margin: 40px 0 25px; font-weight: 700; text-transform: uppercase; font-size: 1.1rem; position: relative; padding-bottom: 10px; width: 100%; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--cian); }
-
-        .about-box { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 30px; width: 100%; border: 1px solid #f0f0f0; }
-        .about-box p { font-size: 0.95rem; color: #555; margin: 0; line-height: 1.7; }
-        .about-highlight { color: var(--purpura); font-weight: 700; }
-
-        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
-        @media (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } }
-        
-        .card { background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); border: 1px solid #eee; width: 100%; }
-        .price-usd { font-size: 2rem; color: var(--purpura); font-weight: 700; margin: 5px 0; }
-        .price-ves { color: #888; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; }
-        
-        .btn-add { background: var(--purpura); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; font-size: 1rem; }
-
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background: var(--whatsapp); color: white; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
-
-        #cart-sidebar { position: fixed; right: -100%; top: 0; width: 85%; max-width: 400px; height: 100%; background: white; z-index: 3000; padding: 25px; transition: 0.4s; display: flex; flex-direction: column; box-shadow: -5px 0 20px rgba(0,0,0,0.2); }
+        :root { --purpura: #4a148c; --cian: #00e5ff; --blanco: #ffffff; --gris: #f4f4f4; --whatsapp: #25d366; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; }
+        header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky; top: 0; z-index: 1000; }
+        .hero { background: linear-gradient(135deg, var(--purpura), #000); padding: 50px 5%; text-align: center; color: white; }
+        .tasa-tag { display: inline-block; background: rgba(0,229,255,0.2); color: var(--cian); padding: 10px 20px; border-radius: 20px; margin-top: 15px; font-weight: 700; border: 1px solid var(--cian); }
+        .container { padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
+        .about-box { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .price-usd { font-size: 2.2rem; color: var(--purpura); font-weight: 700; margin: 10px 0; }
+        .btn-add { background: var(--purpura); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 10px; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 40px; }
+        .test-card { background: white; padding: 15px; border-radius: 15px; border-left: 5px solid var(--cian); font-size: 0.9rem; }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; font-size: 30px; }
+        #cart-sidebar { position: fixed; right: -100%; top: 0; width: 100%; max-width: 400px; height: 100%; background: white; z-index: 2000; padding: 30px; transition: 0.5s; box-shadow: -5px 0 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
         #cart-sidebar.active { right: 0; }
-        
-        #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 4000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: white; padding: 25px; border-radius: 20px; width: 100%; max-width: 400px; max-height: 90vh; overflow-y: auto; }
-        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; font-size: 1rem; }
-
-        footer { text-align: center; padding: 30px; color: #999; font-size: 0.8rem; width: 100%; }
+        #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; border-radius: 20px; width: 90%; max-width: 400px; }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBGNXVRM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header>
-        <div class="logo-text">GL PLUS MED</div>
-        <button class="cart-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
-    </header>
 
-    <section class="hero">
-        <h1>GL PLUS MED VENEZUELA</h1>
-        <div class="tasa-tag">TASA BINANCE: <span id="tasa-val">...</span> Bs/USD</div>
-    </section>
+<header>
+    <div style="font-weight:700; color:var(--purpura); font-size:1.2rem;">GL PLUS MED</div>
+    <button onclick="toggleCart()" style="background:var(--purpura); color:white; border:none; padding:10px 20px; border-radius:50px; font-weight:700; cursor:pointer;">CARRITO (<span id="cart-count">0</span>)</button>
+</header>
 
-    <div class="container">
-        <h2 class="section-title">¿Quiénes Somos?</h2>
-        <div class="about-box">
-            <p>En <span class="about-highlight">GL PLUS MED</span> somos especialistas en la distribución de tratamientos de última generación para el control metabólico en Venezuela. Nos diferenciamos por nuestro <span class="about-highlight">riguroso manejo de la cadena de frío</span>.</p>
-        </div>
+<section class="hero">
+    <h1>GL PLUS MED VENEZUELA</h1>
+    <div class="tasa-tag">TASA BINANCE: <span id="tasa-val">...</span> Bs/USD</div>
+</section>
 
-        <h2 class="section-title">Productos</h2>
-        <div class="grid">
-            <div class="card">
-                <span style="color:#0288d1; font-size:0.7rem; font-weight:800;">❄️ REFRIGERACIÓN GARANTIZADA</span>
-                <h3>Ozempic 0.25 / 0.50 MG</h3>
-                <p class="price-usd">$200</p>
-                <p id="oz1-ves" class="price-ves">Bs. ---</p>
-                <button class="btn-add" onclick="addToCart('Ozempic 0.25/0.50 MG', 200)">Añadir al Carrito</button>
-            </div>
-        </div>
+<div class="container">
+    <div class="about-box">
+        <h2 style="color:var(--purpura)">¿Quiénes Somos?</h2>
+        <p>Especialistas en la distribución de tratamientos de última generación para el control metabólico en Venezuela. Nos diferenciamos por nuestro <b>riguroso manejo de la cadena de frío</b> y productos 100% originales en Caracas y Anzoátegui.</p>
     </div>
 
-    <a href="https://wa.me/584123020704" class="whatsapp-float" target="_blank">W</a>
-
-    <div id="cart-sidebar">
-        <h3 onclick="toggleCart()">Cerrar Pedido X</h3>
-        <div id="cart-content"></div>
-        <button class="btn-add" onclick="openModal()" style="background:var(--whatsapp); margin-top:20px;">FINALIZAR</button>
-    </div>
-
-    <div id="data-modal">
-        <div class="modal-content">
-            <h3>Tus Datos</h3>
-            <input type="text" id="nombre" placeholder="Nombre y Apellido">
-            <input type="date" id="fecha_nac">
-            <input type="number" id="edad" placeholder="Edad">
-            <input type="text" id="ciudad" placeholder="Ciudad o Estado">
-            <button class="btn-add" onclick="enviarPedido()" style="background:var(--whatsapp);">ENVIAR WHATSAPP</button>
-            <button onclick="closeModal()" style="background:none; border:none; width:100%; color:#999; margin-top:10px;">Cancelar</button>
+    <div class="grid">
+        <div class="card">
+            <div style="background:#e1f5fe; color:#0288d1; padding:5px; font-size:0.7rem; font-weight:800; border-radius:10px;">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <h3>Ozempic 0.25 / 0.50 MG</h3>
+            <p class="price-usd">$200</p>
+            <p id="oz1-ves" style="color:#888; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Ozempic 0.25/0.50 MG', 200)">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <div style="background:#e1f5fe; color:#0288d1; padding:5px; font-size:0.7rem; font-weight:800; border-radius:10px;">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <h3>Ozempic 1 MG</h3>
+            <p class="price-usd">$300</p>
+            <p id="oz2-ves" style="color:#888; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Ozempic 1 MG', 300)">Añadir al Carrito</button>
         </div>
     </div>
 
-    <footer>&copy; 2026 GL PLUS MED VENEZUELA</footer>
+    <div class="test-grid">
+        <div class="test-card">"Llegó perfecto a Caracas, muy frío."<br><b>- María G.</b></div>
+        <div class="test-card">"Muy responsables en Lechería."<br><b>- Ricardo M.</b></div>
+        <div class="test-card">"Producto 100% original."<br><b>- Carlos P.</b></div>
+        <div class="test-card">"Excelente atención."<br><b>- Sofía L.</b></div>
+    </div>
+</div>
 
-    <script>
-        const SHEET_ID = '1lOAT9C3cWS3UijTn-J8RVagZD6UdlZEQLWHgShE9nBc';
-        const URL_SHEET = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&range=Hoja 1!B1`;
-        let tasaCambio = 470;
-        let cart = [];
-        let totalUsd = 0;
+<a href="https://wa.me/584123020704" class="whatsapp-float" target="_blank">📱</a>
 
-        async function actualizar() {
-            try {
-                const res = await fetch(URL_SHEET);
-                const text = await res.text();
-                const val = parseFloat(text.replace(/"/g, '').replace(',', '.').trim());
-                if (!isNaN(val)) { tasaCambio = val; }
-            } catch (e) { console.log("Cargando tasa base..."); }
-            render();
-        }
+<div id="cart-sidebar">
+    <h2 style="color:var(--purpura)">Tu Pedido</h2>
+    <div id="cart-content" style="flex-grow:1; overflow-y:auto;"></div>
+    <div style="border-top:2px solid #eee; padding-top:20px; margin-top:20px;">
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.2rem;"><span>Total USD:</span> <span id="total-usd">$0</span></div>
+        <div id="total-ves" style="text-align:right; color:#888;">Bs. 0,00</div>
+    </div>
+    <button class="btn-add" onclick="openModal()" style="background:var(--whatsapp); margin-top:20px;">CONTINUAR</button>
+    <button onclick="toggleCart()" style="background:none; border:none; color:#999; margin-top:10px; cursor:pointer;">Cerrar</button>
+</div>
 
-        function render() {
-            document.getElementById('tasa-val').innerText = tasaCambio.toFixed(2);
-            document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasaCambio).toLocaleString('es-VE')}`;
-        }
+<div id="data-modal">
+    <div class="modal-content">
+        <h3 style="color:var(--purpura); margin-top:0;">Datos del Pedido</h3>
+        <input type="text" id="nombre" placeholder="Nombre y Apellido">
+        <label style="font-size:0.7rem; color:#666;">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha">
+        <input type="number" id="edad" placeholder="Edad">
+        <input type="text" id="ciudad" placeholder="Ciudad o Estado">
+        <button class="btn-add" onclick="enviar()" style="background:var(--whatsapp);">PEDIR POR WHATSAPP</button>
+        <button onclick="closeModal()" style="background:none; border:none; width:100%; color:#999; margin-top:10px; cursor:pointer;">Cancelar</button>
+    </div>
+</div>
 
-        function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
-        function addToCart(n, p) { cart.push({n, p}); totalUsd += p; updateUI(); toggleCart(); }
-        function updateUI() { document.getElementById('cart-count').innerText = cart.length; }
-        function openModal() { document.getElementById('data-modal').style.display = 'flex'; }
-        function closeModal() { document.getElementById('data-modal').style.display = 'none'; }
-        function enviarPedido() {
-            const n = document.getElementById('nombre').value;
-            const c = document.getElementById('ciudad').value;
-            if(!n || !c) return alert("Completa los datos");
-            const num = (c.toLowerCase().includes("caracas")) ? "584123300431" : "584123020704";
-            window.open(`https://wa.me/${num}?text=Pedido de ${n}`, '_blank');
-        }
-        actualizar();
-    </script>
+<script>
+    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1lOAT9C3cWS3UijTn-J8RVagZD6UdlZEQLWHgShE9nBc/gviz/tq?tqx=out:csv&range=Hoja 1!B1';
+    let tasa = 460;
+    let cart = [];
+    let total = 0;
+
+    async function getTasa() {
+        try {
+            const r = await fetch(SHEET_URL);
+            const t = await r.text();
+            const v = parseFloat(t.replace(/"/g, '').replace(',', '.').trim());
+            if(!isNaN(v)) tasa = v;
+        } catch(e) {}
+        document.getElementById('tasa-val').innerText = tasa.toFixed(2);
+        document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('oz2-ves').innerText = `Bs. ${(300 * tasa).toLocaleString('es-VE')}`;
+    }
+
+    function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
+    function addToCart(n, p) { cart.push({n, p}); total += p; update(); toggleCart(); }
+    function update() {
+        document.getElementById('cart-count').innerText = cart.length;
+        document.getElementById('total-usd').innerText = `$${total}`;
+        document.getElementById('total-ves').innerText = `Bs. ${(total * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('cart-content').innerHTML = cart.map((i, idx) => `<div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #eee;"><span>${i.n}</span> <span onclick="removeItem(${idx}, ${i.p})" style="color:red; cursor:pointer;">X</span></div>`).join('');
+    }
+    function removeItem(idx, p) { cart.splice(idx, 1); total -= p; update(); }
+    function openModal() { if(cart.length > 0) document.getElementById('data-modal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('data-modal').style.display = 'none'; }
+    function enviar() {
+        const n = document.getElementById('nombre').value;
+        const f = document.getElementById('fecha').value;
+        const e = document.getElementById('edad').value;
+        const c = document.getElementById('ciudad').value;
+        if(!n || !f || !e || !c) return alert("Completa los datos");
+        const num = c.toLowerCase().includes("caracas") ? "584123300431" : "584123020704";
+        const productos = cart.map(i => `- ${i.n}`).join('%0A');
+        const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${productos}%0A*Total:* $${total}`;
+        window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+    }
+    getTasa();
+</script>
 </body>
 </html>
-
