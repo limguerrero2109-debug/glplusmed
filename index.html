@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KBGNXVRM');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GL PLUS MED | Tienda Oficial GLP-1</title>
@@ -21,30 +26,24 @@
         .price-usd { font-size: 2.2rem; color: var(--purpura); font-weight: 700; margin: 10px 0; }
         .btn-add { background: var(--purpura); color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; }
         .btn-consult { background: #666; color: white; border: none; padding: 18px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 15px; text-decoration: none; display: block; }
-        
         .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .test-card { background: white; padding: 25px; border-radius: 20px; border-left: 5px solid var(--cian); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-        .test-card p { font-style: italic; font-size: 0.9rem; margin-bottom: 10px; }
-        .test-card b { color: var(--purpura); font-size: 0.8rem; }
-
         .faq-box { background: white; border-radius: 15px; padding: 20px; margin-bottom: 15px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .faq-box h4 { margin: 0; display: flex; justify-content: space-between; font-size: 1rem; }
+        .faq-box h4 { margin: 0; display: flex; justify-content: space-between; }
         .faq-answer { display: none; margin-top: 15px; font-size: 0.9rem; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
         .faq-box.active .faq-answer { display: block; }
-
-        /* BOTÓN WHATSAPP MEJORADO */
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: white; border-radius: 50px; text-align: center; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: white; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none; transition: 0.3s; }
         .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
-
         #cart-sidebar { position: fixed; right: -100%; top: 0; width: 100%; max-width: 450px; height: 100%; background: white; z-index: 10000; padding: 40px; transition: 0.5s; display: flex; flex-direction: column; box-shadow: -10px 0 30px rgba(0,0,0,0.2); }
         #cart-sidebar.active { right: 0; }
         #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 11000; justify-content: center; align-items: center; }
         .modal-content { background: white; padding: 35px; border-radius: 30px; width: 90%; max-width: 400px; }
-        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 15px; font-family: 'Montserrat'; box-sizing: border-box; }
+        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 15px; box-sizing: border-box; }
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBGNXVRM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
     <div class="logo-text">GL PLUS MED</div>
@@ -62,7 +61,7 @@
         <p>En <b>GL PLUS MED</b> somos especialistas en la distribución de tratamientos de última generación para el control metabólico en Venezuela. Nos diferenciamos por nuestro <b>riguroso manejo de la cadena de frío</b> y productos 100% originales en Caracas y Anzoátegui.</p>
     </div>
 
-    <h2 class="section-title">Nuestros Productos</h2>
+    <h2 class="section-title">Productos</h2>
     <div class="grid">
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
@@ -102,15 +101,11 @@
     <h2 class="section-title">Preguntas Frecuentes</h2>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Cómo garantizan la cadena de frío? <span>+</span></h4>
-        <p class="faq-answer">Usamos cavas térmicas y geles refrigerantes de larga duración que mantienen la temperatura entre 2°C y 8°C durante todo el transporte.</p>
+        <p class="faq-answer">Usamos cavas térmicas y geles refrigerantes para mantener entre 2°C y 8°C hasta su entrega.</p>
     </div>
     <div class="faq-box" onclick="this.classList.toggle('active')">
         <h4>¿Cuáles son los métodos de pago? <span>+</span></h4>
-        <p class="faq-answer">Aceptamos Zelle, Efectivo ($), Binance (USDT) y Pago Móvil a la tasa publicada en nuestra web.</p>
-    </div>
-    <div class="faq-box" onclick="this.classList.toggle('active')">
-        <h4>¿Hacen envíos a todo el país? <span>+</span></h4>
-        <p class="faq-answer">Sí, entregamos personalmente en Caracas y Anzoátegui. Para el resto del país, realizamos envíos refrigerados asegurando la integridad del producto.</p>
+        <p class="faq-answer">Zelle, Efectivo ($), Binance (USDT) y Pago Móvil.</p>
     </div>
 </div>
 
@@ -119,34 +114,32 @@
 </a>
 
 <div id="cart-sidebar">
-    <h2 style="color:var(--purpura)">Tu Pedido</h2>
+    <h2 style="color:var(--purpura)">Pedido</h2>
     <div id="cart-content" style="flex-grow:1; overflow-y:auto;"></div>
-    <div style="border-top:2px solid #eee; padding-top:20px;">
-        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.2rem;"><span>Total USD:</span> <span id="total-usd">$0</span></div>
+    <div style="border-top:2px solid #eee; padding-top:15px;">
+        <div style="display:flex; justify-content:space-between; font-weight:700;"><span>Total USD:</span> <span id="total-usd">$0</span></div>
         <div id="total-ves" style="text-align:right; color:#888;">Bs. 0,00</div>
     </div>
-    <button class="btn-add" onclick="openModal()" style="background:var(--whatsapp); margin-top:20px;">CONTINUAR</button>
+    <button class="btn-add" onclick="openModal()" style="background:var(--whatsapp); margin-top:15px;">CONTINUAR</button>
     <button onclick="toggleCart()" style="background:none; border:none; color:#999; margin-top:10px; cursor:pointer;">Cerrar</button>
 </div>
 
 <div id="data-modal">
     <div class="modal-content">
-        <h3 style="color:var(--purpura); margin-top:0;">Requisitos del Pedido</h3>
+        <h3 style="color:var(--purpura); margin-top:0;">Requisitos</h3>
         <input type="text" id="nombre" placeholder="Nombre y Apellido">
         <label style="font-size:0.7rem; color:#666;">Fecha de Nacimiento:</label>
         <input type="date" id="fecha">
         <input type="number" id="edad" placeholder="Edad">
         <input type="text" id="ciudad" placeholder="Ciudad o Estado">
-        <button class="btn-add" onclick="enviar()" style="background:var(--whatsapp);">PEDIR POR WHATSAPP</button>
+        <button class="btn-add" onclick="enviar()" style="background:var(--whatsapp);">ENVIAR WHATSAPP</button>
         <button onclick="closeModal()" style="background:none; border:none; width:100%; color:#999; margin-top:10px; cursor:pointer;">Cancelar</button>
     </div>
 </div>
 
 <script>
     const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1lOAT9C3cWS3UijTn-J8RVagZD6UdlZEQLWHgShE9nBc/gviz/tq?tqx=out:csv&range=Hoja 1!B1';
-    let tasa = 470; 
-    let cart = [];
-    let total = 0;
+    let tasa = 460; let cart = []; let total = 0;
 
     async function getTasa() {
         try {
@@ -177,14 +170,12 @@
         const f = document.getElementById('fecha').value;
         const e = document.getElementById('edad').value;
         const c = document.getElementById('ciudad').value;
-        if(!n || !f || !e || !c) return alert("Por favor, complete todos los requisitos.");
+        if(!n || !f || !e || !c) return alert("Complete los datos.");
         const num = c.toLowerCase().includes("caracas") ? "584123300431" : "584123020704";
-        const productos = cart.map(i => `- ${i.n}`).join('%0A');
-        const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha Nac:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${productos}%0A*Total:* $${total}`;
+        const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha Nac:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${cart.map(i => `- ${i.n}`).join('%0A')}%0A*Total:* $${total}`;
         window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
     }
     getTasa();
 </script>
 </body>
 </html>
-
