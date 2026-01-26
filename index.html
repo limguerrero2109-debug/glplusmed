@@ -15,51 +15,27 @@
         :root { --purpura: #4a148c; --cian: #00e5ff; --blanco: #ffffff; --gris: #f4f4f4; --frio: #e1f5fe; --azul-frio: #0288d1; --whatsapp: #25d366; }
         * { box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--gris); color: #333; line-height: 1.6; overflow-x: hidden; width: 100%; }
-        
         header { background: var(--blanco); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .logo-text { font-size: 1.1rem; font-weight: 700; color: var(--purpura); }
         .cart-btn { background: var(--purpura); color: white; border: none; padding: 8px 15px; border-radius: 50px; cursor: pointer; font-weight: 700; font-size: 0.8rem; }
-
         .hero { background: linear-gradient(135deg, var(--purpura), #000); padding: 40px 5%; text-align: center; color: white; }
         .tasa-tag { display: inline-block; background: rgba(0,229,255,0.2); color: var(--cian); padding: 8px 15px; border-radius: 20px; margin-top: 10px; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--cian); }
-
         .container { padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
         .section-title { color: var(--purpura); text-align: center; margin: 40px 0 25px; font-weight: 700; text-transform: uppercase; font-size: 1.2rem; }
-        
         .about-box { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 30px; }
-        .about-box p { font-size: 0.95rem; color: #555; line-height: 1.7; }
-        .about-highlight { color: var(--purpura); font-weight: 700; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
         .cold-chain-bar { background: var(--frio); color: var(--azul-frio); font-size: 0.7rem; font-weight: 800; padding: 6px; margin: -20px -20px 15px -20px; border-radius: 0; }
-        
         .product-img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; background: #fff; border-radius: 10px; }
-
         .price-usd { font-size: 2rem; color: var(--purpura); font-weight: 700; margin: 5px 0; }
         .btn-add { background: var(--purpura); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 10px; }
-        .btn-consult { background: #666; color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 700; width: 100%; margin-top: 10px; text-decoration: none; display: block; }
-
-        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
-        .test-card { background: white; padding: 20px; border-radius: 15px; border-left: 5px solid var(--cian); font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .test-card b { color: var(--purpura); font-size: 0.8rem; }
-
-        .faq-box { background: white; border-radius: 15px; padding: 18px; margin-bottom: 12px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .faq-box h4 { margin: 0; display: flex; justify-content: space-between; font-size: 0.95rem; color: var(--purpura); }
-        .faq-answer { display: none; margin-top: 12px; font-size: 0.85rem; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
-        .faq-box.active .faq-answer { display: block; }
-
         .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background-color: var(--whatsapp); color: white; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
-        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
-
         #cart-sidebar { position: fixed; right: -110%; top: 0; width: 100%; max-width: 350px; height: 100%; background: white; z-index: 10001; padding: 30px; transition: 0.4s ease-in-out; display: flex; flex-direction: column; box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
         #cart-sidebar.active { right: 0; }
         .cart-close-x { position: absolute; top: 15px; right: 15px; font-size: 1.8rem; border: none; background: none; color: #999; cursor: pointer; }
-
         #data-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10002; justify-content: center; align-items: center; padding: 20px; }
         .modal-content { background: white; padding: 25px; border-radius: 20px; width: 100%; max-width: 380px; }
         input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 10px; font-family: 'Montserrat'; font-size: 1rem; }
-
         footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #999; }
     </style>
 </head>
@@ -79,7 +55,7 @@
 <div class="container">
     <h2 class="section-title">¿Quiénes Somos?</h2>
     <div class="about-box">
-        <p>En <span class="about-highlight">GL PLUS MED</span> somos especialistas en la distribución de tratamientos de última generación para el control metabólico y pérdida de peso en Venezuela. Nos diferenciamos por nuestro <span class="about-highlight">riguroso manejo de la cadena de frío</span> y por ofrecer productos 100% originales con atención personalizada en Caracas y el estado Anzoátegui.</p>
+        <p>En <b>GL PLUS MED</b> somos especialistas en la distribución de tratamientos de última generación para el control metabólico en Venezuela. Nos diferenciamos por nuestro <b>riguroso manejo de la cadena de frío</b> y productos 100% originales.</p>
     </div>
 
     <h2 class="section-title">Productos</h2>
@@ -100,13 +76,55 @@
             <p id="oz2-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
             <button class="btn-add" onclick="addToCart('Ozempic 1 MG', 300)">Añadir al Carrito</button>
         </div>
+
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
-            <img src="img/mounjaro.jpg.jpeg" alt="Mounjaro" class="product-img">
+            <img src="img/mounjaro.jpg.jpeg" alt="Mounjaro 5mg" class="product-img">
             <h3>Mounjaro 5 MG</h3>
             <p class="price-usd">$200</p>
             <p id="mj-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
-            <button class="btn-consult" onclick="window.open('https://wa.me/584123020704?text=Consulta Disponibilidad Mounjaro 5mg', '_blank')">CONSULTAR</button>
+            <button class="btn-add" onclick="addToCart('Mounjaro 5 MG', 200)">Añadir al Carrito</button>
+        </div>
+
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <img src="img/mounjaro-2.5.jpg.jpeg" alt="Mounjaro 2.5mg" class="product-img">
+            <h3>Mounjaro Kwik Pen 2.5 MG</h3>
+            <p class="price-usd">$200</p>
+            <p id="mj25-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Mounjaro Kwik Pen 2.5 MG', 200)">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <img src="img/mounjaro-kwik-5.jpg.jpeg" alt="Mounjaro Kwik 5mg" class="product-img">
+            <h3>Mounjaro Kwik Pen 5 MG</h3>
+            <p class="price-usd">$200</p>
+            <p id="mjk5-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Mounjaro Kwik Pen 5 MG', 200)">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <img src="img/mounjaro-7.5.jpg.jpeg" alt="Mounjaro 7.5mg" class="product-img">
+            <h3>Mounjaro Kwik Pen 7.5 MG</h3>
+            <p class="price-usd">$250</p>
+            <p id="mj75-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Mounjaro Kwik Pen 7.5 MG', 250)">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <img src="img/mounjaro-10.jpg.jpeg" alt="Mounjaro 10mg" class="product-img">
+            <h3>Mounjaro Kwik Pen 10 MG</h3>
+            <p class="price-usd">$300</p>
+            <p id="mj10-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Mounjaro Kwik Pen 10 MG', 300)">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
+            <img src="img/mounjaro-12.jpg.jpeg" alt="Mounjaro 12mg" class="product-img">
+            <h3>Mounjaro Kwik Pen 12 MG</h3>
+            <p class="price-usd">$350</p>
+            <p id="mj12-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
+            <button class="btn-add" onclick="addToCart('Mounjaro Kwik Pen 12 MG', 350)">Añadir al Carrito</button>
         </div>
     </div>
 
@@ -115,30 +133,11 @@
         <div class="test-card"><p>"El envío a Caracas fue perfecto, llegó bien frío."</p><b>María G. (Caracas)</b></div>
         <div class="test-card"><p>"Muy responsables en el envío a Lechería."</p><b>Ricardo M. (Anzoátegui)</b></div>
         <div class="test-card"><p>"Atención rápida y producto original."</p><b>Carlos P. (Barcelona)</b></div>
-        <div class="test-card"><p>"La cava térmica mantuvo la temperatura ideal."</p><b>Sofía L. (Caracas)</b></div>
-        <div class="test-card"><p>"Total confianza, los recomiendo 100%."</p><b>Andrea T. (Valencia)</b></div>
-        <div class="test-card"><p>"Excelente asesoría por WhatsApp."</p><b>José S. (Maracay)</b></div>
-        <div class="test-card"><p>"Llegó a Puerto Ordaz sin problemas."</p><b>Luis H. (Bolívar)</b></div>
-        <div class="test-card"><p>"El mejor precio que conseguí en el país."</p><b>Elena F. (Caracas)</b></div>
-    </div>
-
-    <h2 class="section-title">Preguntas Frecuentes</h2>
-    <div class="faq-box" onclick="this.classList.toggle('active')">
-        <h4>¿Cómo garantizan la cadena de frío? <span>+</span></h4>
-        <p class="faq-answer">Usamos cavas térmicas y geles refrigerantes de larga duración que mantienen la temperatura entre 2°C y 8°C durante todo el transporte.</p>
-    </div>
-    <div class="faq-box" onclick="this.classList.toggle('active')">
-        <h4>¿Cuáles son los métodos de pago? <span>+</span></h4>
-        <p class="faq-answer">Aceptamos Zelle, Efectivo ($), Binance (USDT) y Pago Móvil a la tasa publicada en nuestra web.</p>
-    </div>
-    <div class="faq-box" onclick="this.classList.toggle('active')">
-        <h4>¿Hacen envíos a todo el país? <span>+</span></h4>
-        <p class="faq-answer">Sí, entregamos personalmente en Caracas y Anzoátegui. Para el resto del país, realizamos envíos refrigerados asegurando la integridad del producto.</p>
     </div>
 </div>
 
 <a href="https://wa.me/584123020704" class="whatsapp-float" target="_blank">
-    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.82 0 4.54-3.7 8.25-8.24 8.25-1.61 0-3.19-.47-4.54-1.35l-.33-.21-3.15.83.85-3.07-.23-.37a8.204 8.204 0 0 1-1.26-4.32c0-4.54 3.7-8.25 8.24-8.25M8.41 7.33c-.15 0-.39.06-.59.28-.21.21-.79.77-.79 1.88s.82 2.19.92 2.33c.11.14 1.61 2.46 3.9 3.45.54.24.97.38 1.3.48.55.17 1.05.15 1.44.09.44-.07 1.35-.55 1.54-1.08.19-.53.19-.99.13-1.08-.05-.09-.2-.14-.42-.26-.23-.11-1.35-.67-1.56-.74-.21-.07-.36-.11-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.48.06-.23-.11-.95-.35-1.81-1.12-.67-.6-1.12-1.34-1.25-1.57-.13-.23-.01-.35.1-.47.1-.1.22-.26.33-.39.11-.13.15-.22.22-.36.07-.14.03-.26-.01-.36-.04-.1-0.39-.94-.53-1.28-.14-.35-.29-.3-.39-.3z"></path></svg>
+    <svg viewBox="0 0 24 24" width="30" height="30"><path fill="white" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.82 0 4.54-3.7 8.25-8.24 8.25-1.61 0-3.19-.47-4.54-1.35l-.33-.21-3.15.83.85-3.07-.23-.37a8.204 8.204 0 0 1-1.26-4.32c0-4.54 3.7-8.25 8.24-8.25M8.41 7.33c-.15 0-.39.06-.59.28-.21.21-.79.77-.79 1.88s.82 2.19.92 2.33c.11.14 1.61 2.46 3.9 3.45.54.24.97.38 1.3.48.55.17 1.05.15 1.44.09.44-.07 1.35-.55 1.54-1.08.19-.53.19-.99.13-1.08-.05-.09-.2-.14-.42-.26-.23-.11-1.35-.67-1.56-.74-.21-.07-.36-.11-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.48.06-.23-.11-.95-.35-1.81-1.12-.67-.6-1.12-1.34-1.25-1.57-.13-.23-.01-.35.1-.47.1-.1.22-.26.33-.39.11-.13.15-.22.22-.36.07-.14.03-.26-.01-.36-.04-.1-0.39-.94-.53-1.28-.14-.35-.29-.3-.39-.3z"></path></svg>
 </a>
 
 <div id="cart-sidebar">
@@ -181,6 +180,11 @@
         document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('oz2-ves').innerText = `Bs. ${(300 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('mj-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mj25-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mjk5-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mj75-ves').innerText = `Bs. ${(250 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mj10-ves').innerText = `Bs. ${(300 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('mj12-ves').innerText = `Bs. ${(350 * tasa).toLocaleString('es-VE')}`;
     }
     function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
     function addToCart(n, p) { cart.push({n, p}); total += p; update(); toggleCart(); }
@@ -201,4 +205,9 @@
         if(!n || !f || !e || !c) return alert("Complete los datos.");
         const num = c.toLowerCase().includes("caracas") ? "584123300431" : "584123020704";
         const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${cart.map(i => `- ${i.n}`).join('%0A')}%0A*Total:* $${total}`;
-        window.open(`https://wa
+        window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+    }
+    getTasa();
+</script>
+</body>
+</html>
