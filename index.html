@@ -34,7 +34,6 @@
         .card { background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
         .cold-chain-bar { background: var(--frio); color: var(--azul-frio); font-size: 0.7rem; font-weight: 800; padding: 6px; margin: -20px -20px 15px -20px; border-radius: 0; }
         
-        /* Estilo para las imágenes de productos */
         .product-img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; background: #fff; border-radius: 10px; }
 
         .price-usd { font-size: 2rem; color: var(--purpura); font-weight: 700; margin: 5px 0; }
@@ -87,7 +86,7 @@
     <div class="grid">
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
-            <img src="img/ozempic.jpg" alt="Ozempic" class="product-img">
+            <img src="img/ozempic.jpg.jpeg" alt="Ozempic" class="product-img">
             <h3>Ozempic 0.25/0.50 MG</h3>
             <p class="price-usd">$200</p>
             <p id="oz1-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
@@ -95,7 +94,7 @@
         </div>
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
-            <img src="img/ozempic-1mg.jpg" alt="Ozempic 1mg" class="product-img">
+            <img src="img/ozempic-1mg.jpg.jpeg" alt="Ozempic 1mg" class="product-img">
             <h3>Ozempic 1 MG</h3>
             <p class="price-usd">$300</p>
             <p id="oz2-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
@@ -103,7 +102,7 @@
         </div>
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
-            <img src="img/mounjaro.jpg" alt="Mounjaro" class="product-img">
+            <img src="img/mounjaro.jpg.jpeg" alt="Mounjaro" class="product-img">
             <h3>Mounjaro 5 MG</h3>
             <p class="price-usd">$200</p>
             <p id="mj-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
@@ -202,13 +201,4 @@
         if(!n || !f || !e || !c) return alert("Complete los datos.");
         const num = c.toLowerCase().includes("caracas") ? "584123300431" : "584123020704";
         const msg = `*NUEVO PEDIDO*%0A*Nombre:* ${n}%0A*Fecha:* ${f}%0A*Edad:* ${e}%0A*Ciudad:* ${c}%0A*Pedido:*%0A${cart.map(i => `- ${i.n}`).join('%0A')}%0A*Total:* $${total}`;
-        window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
-    }
-    getTasa();
-    // FAQ Toggle
-    document.querySelectorAll('.faq-box').forEach(box => {
-        box.addEventListener('click', () => box.classList.toggle('active'));
-    });
-</script>
-</body>
-</html>
+        window.open(`https://wa
