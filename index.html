@@ -122,6 +122,7 @@
             <p id="oz2-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
             <button class="btn-add" onclick="addToCart('Ozempic 1 MG', 280)">Añadir al Carrito</button>
         </div>
+
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
             <img src="img/mounjaro.jpg.jpeg" alt="Mounjaro 5mg" class="product-img">
@@ -130,6 +131,7 @@
             <p id="mj-ves" style="color:#888; font-size:0.9rem; font-weight:600;"></p>
             <button class="btn-add" onclick="addToCart('Mounjaro 5 MG', 200)">Añadir al Carrito</button>
         </div>
+
         <div class="card">
             <div class="cold-chain-bar">❄️ REFRIGERACIÓN GARANTIZADA</div>
             <img src="img/mounjaro-2.5.jpg.jpeg" alt="Mounjaro 2.5mg" class="product-img">
@@ -191,7 +193,7 @@
         <div class="test-card"><p>"Total confianza, los recomiendo 100%."</p><b>Andrea T. (Valencia)</b></div>
         <div class="test-card"><p>"Atención impecable y producto original. Me llegó a Maracay en 24 horas."</p><b>Carlos R. (Aragua)</b></div>
         <div class="test-card"><p>"Excelente manejo de la cadena de frío para el Ozempic. Súper recomendados."</p><b>Laura V. (Zulia)</b></div>
-        <div class="test-card"><p>"Trato muy profesional. El Mounjaro llegó en perfectas condiciones a Mérida."</p><b>José D. (Mérida)</b></div>
+        <div class="test-card"><p>"Trato muy profesional. El Mounjaro llegó en perfectas condiciones a Mérida."</p><b>José D. (M Mérida)</b></div>
         <div class="test-card"><p>"Los mejores precios que conseguí en el país y con garantía de calidad."</p><b>Patricia L. (Miranda)</b></div>
         <div class="test-card"><p>"Muy serios con el despacho. Me mantuvieron informada de todo el trayecto."</p><b>Sofía M. (Bolívar)</b></div>
         <div class="test-card"><p>"Excelente opción para comprar estos medicamentos de forma segura en Venezuela."</p><b>Luis H. (Lara)</b></div>
@@ -261,8 +263,9 @@
             if(!isNaN(v)) tasa = v;
         } catch(e) {}
         document.getElementById('tasa-val').innerText = tasa.toFixed(2);
-        document.getElementById('oz1-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
-        document.getElementById('oz2-ves').innerText = `Bs. ${(300 * tasa).toLocaleString('es-VE')}`;
+        // Actualización de cálculos en Bolívares con los nuevos precios
+        document.getElementById('oz1-ves').innerText = `Bs. ${(180 * tasa).toLocaleString('es-VE')}`;
+        document.getElementById('oz2-ves').innerText = `Bs. ${(280 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('mj-ves').innerText = `Bs. ${(200 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('mj25-ves').innerText = `Bs. ${(650 * tasa).toLocaleString('es-VE')}`;
         document.getElementById('mjk5-ves').innerText = `Bs. ${(750 * tasa).toLocaleString('es-VE')}`;
@@ -296,5 +299,3 @@
 </script>
 </body>
 </html>
-
-
